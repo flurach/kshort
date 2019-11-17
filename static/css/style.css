@@ -1,0 +1,77 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    transition: .5s;
+}
+
+html, body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: url('../img/wlp.jpg') center / cover;
+}
+
+form {
+    border-radius: 5px;
+    padding: 60px;
+    width: 400px;
+    background: rgba(255, 255, 255, .5);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, .3);
+}
+
+h1 {
+    padding-bottom: 30px;
+    font-weight: 300;
+    text-align: center;
+}
+
+input {
+    font-size: 16px;
+    padding: 15px;
+    margin: 5px;
+    width: calc(100% - 40px);
+    border: 1px solid rgba(0, 0, 0, .05);
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, .3);
+}
+
+input:focus {
+    box-shadow: 11px 11px 11px rgba(0, 0, 0, .25);
+}
+
+input[type="submit"] {
+    width: auto;
+    padding: 10px 30px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    border: 1px solid rgba(0, 0, 0, .05);
+    background: deepskyblue;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    filter: brightness(110%);
+}
+
+#result {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    color: deepskyblue;
+    font-size: 22px;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, .4);
+}
+
+#result.error {
+    color: red;
+    font-size: 30px;
+    text-decoration: underline;
+}
