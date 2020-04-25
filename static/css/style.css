@@ -13,7 +13,7 @@ html, body {
     justify-content: center;
     width: 100%;
     height: 100%;
-    background: url('../img/wlp.jpg') center / cover;
+    background: #333;
 }
 
 form {
@@ -37,11 +37,12 @@ input {
     width: calc(100% - 40px);
     border: 1px solid rgba(0, 0, 0, .05);
     border-radius: 5px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, .3);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .3);
+    text-align: center;
 }
 
-input:focus {
-    box-shadow: 11px 11px 11px rgba(0, 0, 0, .25);
+input:focus, input:hover {
+    box-shadow: 4px 4px 11px rgba(0, 0, 0, .25);
 }
 
 input[type="submit"] {
