@@ -6,7 +6,7 @@ const app = express()
 // plugins
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(express.static('static'))
+app.use(express.static('public'))
 
 
 // database
@@ -18,7 +18,7 @@ const aliases = new AsyncNedb({
 
 
 // index page
-app.get('/', (req, res) => res.sendFile(__dirname + '/static/index.html'))
+app.get('/', (req, res) => res.sendFile(__dirname + '/public/index.html'))
 
 
 // create alias route
@@ -56,11 +56,12 @@ app.post('/', async (req, res) => {
 app.get('/:alias', async (req, res) => {
 
 	// check if alias exists
-	const alias = await aliases.asyncFindOne({ alias })
-	if (!alias)
+	const { alias } = req.params
+	const db_alias = await aliases.asyncFindOne({ alias })
+	if (!db_alias)
 		return res.send('Url not found :(')
 
-	res.redirect(alias.url)
+	res.redirect(db_alias.url)
 })
 
 
