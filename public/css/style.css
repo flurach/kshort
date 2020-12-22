@@ -59,6 +59,8 @@ input[type="submit"] {
     border: none;
     background: linear-gradient(to bottom right, deepskyblue, dodgerblue);
     cursor: pointer;
+    margin-top: 5%;
+    margin-left: 30%;
 }
 
 input[type="submit"]:hover {
@@ -77,11 +79,13 @@ input[type="submit"]:hover {
 }
 
 #back {
+    margin-top: 50%;
+    margin-left: 45%;
     display: none;
     position: relative; 
     background: linear-gradient(white);
     color: deepskyblue;
-    font-size: 27px;
+    font-size: 35px;
 }
 
 #back:hover {
