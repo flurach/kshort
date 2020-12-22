@@ -3,6 +3,7 @@ const url = document.getElementById('url')
 const alias = document.getElementById('alias')
 const result = document.getElementById('result')
 const submit = document.getElementById('submit')
+const back = document.getElementById('back')
 
 form.onsubmit = e => {
 	e.preventDefault()
@@ -21,8 +22,16 @@ form.onsubmit = e => {
 		alias.style.display = 'none'
 		submit.style.display = 'none'
 		
+		// show back button
+		back.style.display = 'inline'
+		
 		// display result
 		result.innerHTML = document.location.href + alias.value
 		result.style.display = 'block'
 	})
 }
+
+// that was my first Jquery code! Selcuk Tatar 
+$("#back").click(function() {
+	window.location = '../'
+})
