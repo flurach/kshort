@@ -23,7 +23,7 @@ form {
     padding: 60px;
     width: 400px;
     background: rgba(255, 255, 255, .75);
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, .3);
+    box-shadow: 4px 4px 11px rgba(0, 0, 0, .15);
 }
 
 h1 {
@@ -82,7 +82,7 @@ input[type="submit"]:hover {
     margin-top: 50%;
     margin-left: 45%;
     display: none;
-    position: relative; 
+    position: relative;
     background: linear-gradient(white);
     color: deepskyblue;
     font-size: 35px;
